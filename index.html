@@ -12,32 +12,36 @@
 
         /* You can set custom dimensions here */
         .game { width: 100vw; height: 100vh; }
-
+        
         /* Uncomment to remove the frame on top of the canvas and start the game directly */
         /* #game-frame { display: none; } */
     </style>
 </head>
-<body style="margin:0; padding:0;">
-        <div id="mySidenav" class="sidenav">
+<body style="margin:0; padding:0; background: linear-gradient(to right bottom,#ECEFF4,rgb(161, 176, 199));">
+    <div id="mySidenav" class="sidenav" onmouseleave="closeNav()">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="https://scythe101.github.io">Home</a>
         <a href="https://scythe101.github.io/htmlclickergame">HTML Clicker Game</a>
         <a href="https://scythe101.github.io/SummationCalc">Summation Notation Calculator</a>
         <a href="https://scythe101.github.io/scythes_breakout">Scythe's Breakout</a>
         <a href="https://scythe101.github.io/scythes_shmup/">Scythe's Shmup</a>
+        <a href="https://scythe101.github.io/scythe-os/">Scythe OS</a>
+        <a href="https://scythe101.github.io/ninja_platformer">Ninja Platformer</a>
         
       </div>
-    <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
-    <div class="game" style="margin: 0; position: relative; background: #1a1c2c;">
+    
+    
+      <span onmouseover="teaseNav()" onmouseleave="closeTeasedNav()" id="menuButton" onclick="openNav()">&#9776;</span>
+    <div class="game" style="margin: 0; position: relative; background: linear-gradient(to right bottom,#ECEFF4,rgb(161, 176, 199));">
 
-        <div id="game-frame" style="cursor: pointer; position: absolute; margin: 0 auto; opacity: 1; background: #1a1c2c; width: 100%; height: 100%;">
+        <div id="game-frame" style="cursor: pointer; position: absolute; margin: 0 auto; opacity: 1; background: linear-gradient(to right bottom,#ECEFF4,rgb(161, 176, 199)); width: 100%; height: 100%;">
             <div style="text-align: center; color: white; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
                 <p style="margin: 0;">- CLICK TO PLAY -</p>
             </div>
 
         </div>
 
-        <canvas style="width: 100%; height: 95%; margin: 0 auto; display: block; image-rendering: pixelated;" id="canvas" oncontextmenu="event.preventDefault()" onmousedown="window.focus()"></canvas>
+        <canvas style="width: 100%; height: 95%; margin: 0 auto; display: block; image-rendering: pixelated; background:linear-gradient(to right bottom,#ECEFF4,rgb(161, 176, 199))" id="canvas" oncontextmenu="event.preventDefault()" onmousedown="window.focus()"></canvas>
     </div>
 
     <script type="text/javascript">
